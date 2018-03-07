@@ -61,6 +61,9 @@
       FXOS8700_REGISTER_CTRL_REG3       = 0x2C, /**< 0x2C (default value = 0b00000000, read/write) */
       FXOS8700_REGISTER_CTRL_REG4       = 0x2D, /**< 0x2D (default value = 0b00000000, read/write) */
       FXOS8700_REGISTER_CTRL_REG5       = 0x2E, /**< 0x2E (default value = 0b00000000, read/write) */
+      FXOS8700_REGISTER_OFF_X           = 0x2F,   // OZ - Offset X
+      FXOS8700_REGISTER_OFF_Y           = 0x30,   // OZ - Offset Y
+      FXOS8700_REGISTER_OFF_Z           = 0x31,   // OZ - Offset Z
       FXOS8700_REGISTER_MSTATUS         = 0x32, /**< 0x32 */
       FXOS8700_REGISTER_MOUT_X_MSB      = 0x33, /**< 0x33 */
       FXOS8700_REGISTER_MOUT_X_LSB      = 0x34, /**< 0x34 */
