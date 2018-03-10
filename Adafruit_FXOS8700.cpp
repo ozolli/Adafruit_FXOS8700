@@ -176,6 +176,9 @@ bool Adafruit_FXOS8700::begin(fxos8700AccelRange_t rng, int xoff, int yoff, int 
       break;
   }
   /* OZ - Offsets */
+  write8(FXOS8700_REGISTER_OFF_X, xoff);
+  write8(FXOS8700_REGISTER_OFF_Y, yoff);
+  write8(FXOS8700_REGISTER_OFF_Z, zoff);
   /* High resolution */
   write8(FXOS8700_REGISTER_CTRL_REG2, 0x02);
   /* Active, Normal Mode, Low Noise, 100Hz in Hybrid Mode */
