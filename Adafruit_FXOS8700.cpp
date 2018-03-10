@@ -136,7 +136,7 @@ Adafruit_FXOS8700::Adafruit_FXOS8700(int32_t accelSensorID, int32_t magSensorID)
      @return True if the device was successfully initialized, otherwise false.
  */
  /**************************************************************************/
-bool Adafruit_FXOS8700::begin(fxos8700AccelRange_t rng)
+bool Adafruit_FXOS8700::begin(fxos8700AccelRange_t rng, int xoff, int yoff, int zoff )
 {
   /* Enable I2C */
   Wire.begin();
@@ -176,9 +176,6 @@ bool Adafruit_FXOS8700::begin(fxos8700AccelRange_t rng)
       break;
   }
   /* OZ - Offsets */
-  write8(FXOS8700_REGISTER_OFF_X, -14); // -13
-  write8(FXOS8700_REGISTER_OFF_Y, 20); // 22
-  write8(FXOS8700_REGISTER_OFF_Z, -27); // -26
   /* High resolution */
   write8(FXOS8700_REGISTER_CTRL_REG2, 0x02);
   /* Active, Normal Mode, Low Noise, 100Hz in Hybrid Mode */

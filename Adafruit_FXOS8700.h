@@ -115,7 +115,7 @@ class Adafruit_FXOS8700 : public Adafruit_Sensor
   public:
     Adafruit_FXOS8700(int32_t accelSensorID = -1, int32_t magSensorID = -1);
 
-    bool begin           ( fxos8700AccelRange_t rng = ACCEL_RANGE_2G );
+    bool begin           ( fxos8700AccelRange_t rng = ACCEL_RANGE_2G, int xoff = 0, int yoff = 0, int zoff = 0 );
     bool getEvent        ( sensors_event_t* accel );
     void getSensor       ( sensor_t* accel );
     bool getEvent        ( sensors_event_t* accel, sensors_event_t* mag );
