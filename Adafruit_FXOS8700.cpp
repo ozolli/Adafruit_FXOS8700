@@ -132,6 +132,9 @@ Adafruit_FXOS8700::Adafruit_FXOS8700(int32_t accelSensorID, int32_t magSensorID)
 
      @param  rng
              The range to set for the accelerometer, based on fxos8700AccelRange_t
+     @param  xoff Offset accéléromètre axe X.
+     @param  yoff Offset accéléromètre axe Y.
+     @param  zoff Offset accéléromètre axe Z.
 
      @return True if the device was successfully initialized, otherwise false.
  */
