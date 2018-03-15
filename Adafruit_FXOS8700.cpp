@@ -185,9 +185,9 @@ bool Adafruit_FXOS8700::begin(fxos8700AccelRange_t rng, int xoff, int yoff, int 
   /* High resolution */
   write8(FXOS8700_REGISTER_CTRL_REG2, 0x02);
   /* Active, Normal Mode, Low Noise, 100Hz in Hybrid Mode */
-  //write8(FXOS8700_REGISTER_CTRL_REG1, 0x15);
+  write8(FXOS8700_REGISTER_CTRL_REG1, 0x15);
   /* OZ - Active, Normal Mode, Low Noise, 50Hz in Hybrid Mode, 6.25Hz in sleep mode */
-  write8(FXOS8700_REGISTER_CTRL_REG1, 0x5D); // 0b01011101
+  //write8(FXOS8700_REGISTER_CTRL_REG1, 0x5D); // 0b01011101
 
   /* Configure the magnetometer */
   /* Hybrid Mode, Over Sampling Rate = 16 */
